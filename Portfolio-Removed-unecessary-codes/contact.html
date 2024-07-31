@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>La Cheska's Cafe</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-572-designer.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 572 Designer
+
+https://templatemo.com/tm-572-designer
+
+-->
+  </head>
+
+<body>
+
+  
+
+  <header id="#top">
+      <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link " href="index.html">My Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="trending.html">To Remember</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Check-In</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="explore.html">Themed Questions</a>
+                  </li> 
+                </ul>
+              </div>
+          </div>
+      </nav>
+    </header>
+
+    <div class="page-banner change-name">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="header-text">
+                        <h2><em>Our</em> Relationship Check-In</h2>
+                        <p>Hey, love. Welcome to "Our Relationship Check-in," a set of questions that I think will help us reflect on our relationship and grow even closer. These questions are meant to be light, intimate, and solely for improving our  relationship.Through this check-in, we can deepen our connection and better understand each other.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container mb-5">
+		<div class="button-rel" button onclick="spin()"><center>Click Me!</center></button>
+		<div id="question"></div>
+    </section>
+    
+</body>
+
+  <!-- Scripts -->
+  <script>
+    var questions = [
+    "How do you feel our relationship has evolved since our last check-in?",
+"What activities or experiences have brought us closer together recently?",
+"Do you have any suggestions for improving our communication and understanding each other's needs and desires?",
+"How can we keep the spark alive and maintain a strong connection in our relationship?",
+"What are the top three priorities you think we should focus on in our relationship at this stage?",
+"Have you discovered anything new about yourself in the context of our relationship since our last discussion?",
+"What's one thing you genuinely appreciate about our relationship and the way we interact?",
+"Is there anything specific you'd like to improve or explore in our intimate life?",
+"What are some new things you'd like to explore or experiment with sexually?",
+"Is there anything you need from me that you feel you're not currently getting?",
+"What's something you've been hesitant to bring up but feel it's essential to discuss?",
+"How can we make each other feel even more loved and valued in our day-to-day lives?",
+"What are some goals or aspirations you'd like us to pursue together in the coming year?",
+"How can we best support each other in achieving our personal goals and dreams?",
+"How can we deepen our emotional connection and understanding of each other?",
+"What are some ways we can enhance our physical intimacy and make it more fulfilling?",
+"What joint accomplishments or projects would you like us to work on as a team?",
+"How can we support each other's mental well-being and overall happiness?",
+"What's one thing you'd love to learn from me or discover about me?",
+"What can I do to make you feel more supported and cherished in our relationship?",
+"What's one thing you're curious to learn about me or my past experiences?",
+"What steps can we take to keep the romance alive and exciting between us?",
+"What's one personal goal or ambition you'd like to pursue in your life?",
+"What's one thing you're sincerely grateful for in our relationship?",
+"What future experiences or milestones are you looking forward to sharing with me?",
+"What makes you proud of us as a couple and our journey together?",
+"What's one thing that never fails to turn you on or attract you to me?",
+"What's one thing that can sometimes turn you off or create a disconnect between us?",
+"What's one thing you'd like to try in our relationship but feel a bit apprehensive about?",
+"What's one new experience or adventure you'd like to explore together with me?",
+"Is there anything from our past that you'd like to revisit or do again?",
+"What's one emotional aspect you'd like me to understand better or help you with?",
+"What do you want to learn from me emotionally, and how can I support you in that?",
+"Do you feel happy and fulfilled in our relationship at this stage?",
+"Do you believe our relationship meets your expectations and satisfies your needs?",
+"Are there any specific needs or desires you have that you feel are not being met in our relationship?",
+"Is there anything you've learned from me that has positively impacted your personal growth?",
+"Do you have any concerns or worries about our relationship that you'd like to discuss?",
+"What kinds of dates or activities would you like us to explore together?",
+"Do you see me as someone you can learn from, and in what ways do you think that could be?",
+"If we were together right now, what's one thing you'd love to do or experience with me?"
+    ];
+  
+    var usedQuestions = [];
+
+    function spin() {
+            if (usedQuestions.length === questions.length) {
+                // If all questions have been used, reset the usedQuestions array.
+                usedQuestions = [];
+            }
+
+            var remainingQuestions = questions.filter(function (question, index) {
+                return !usedQuestions.includes(index);
+            });
+
+            var randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            var questionToShow = remainingQuestions[randomIndex];
+
+            var questionIndex = questions.indexOf(questionToShow);
+            usedQuestions.push(questionIndex);
+
+            document.getElementById("question").innerHTML = questionToShow;
+    }
+    </script>
+
+
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+</html>

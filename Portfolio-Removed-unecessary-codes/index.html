@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>La Cheska's Cafe</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-572-designer.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <style>
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    
+      .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        max-width: 50%;
+        text-align: center;
+      }
+    
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    
+      h2 {
+        margin-bottom: 10px;
+      }
+    
+      .accept-button,
+      .decline-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    
+      .accept-button {
+        background-color: #4caf50;
+        color: #fff;
+      }
+    
+      .decline-button {
+        background-color: #f44336;
+        color: #fff;
+      }
+    
+      .accept-button:hover,
+      .decline-button:hover {
+        opacity: 0.8;
+      }
+    
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .modal-content {
+          max-width: 90%;
+          padding: 20px;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        .modal-content {
+          max-width: 100%;
+          padding: 10px;
+        }
+      }
+    </style>
+    
+    
+  </head>
+
+  <body>
+    <header id="#top">
+      <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img src="assets/images/white-logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">My Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trending.html">To Remember</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Check-In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="explore.html">Themed Questions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header> 
+
+    <div class="main-banner change-name">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="header-text">
+              <h6>Welcome To</h6>
+              <h2><em>Our Relationship Check In ♡</em></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="whats-trending">
+      <div class="container expanded">
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
+            <div class="section-heading">
+              <h2 id="index-h2-heading">Two Souls, <br /><em>One Heart</em>.</h2>
+            </div>
+            <div class="left-content">
+              <p style="color: gray; opacity: .7;">
+                Hi, my love! I know it's kind of random of me to do this but I just want to spice
+                things up a bit in our checkups mwehehe. Listen to me, okay? I just want you to know
+                that I love you. I have never regretted marrying and loving you. Each day that we spent together makes me feel like I'm the most
+                blessed man in this world. I love you not knowing when, not knowing how, but all I
+                know is I want you. I want you today, I want you tomorrow, and will keep on wanting
+                you for a lifetime. I'll keep this short na and let's just keep making more fun and
+                loving memories hm? I love you, my love.
+              </p>
+
+              <p>
+                Hello, asawa ko. I still remember doing all these with little knowledge of coding at that time and gusto ko lang magpasikat sa'yo and of course to make you smile, but looking at it now, I don't want to change or improve this na pala. I want this to be a reminder to me/to us na we have always started at something, at some point, and ito na tayo ngayon. Still growing, still learning, still adapting, and compromising to love each other better. <br><br>
+
+                After all these time I could still say na "I have never regretted marrying and loving you. Each day that we spent together makes me feel like I'm the most
+                blessed man in this world. I love you not knowing when, not knowing how, but all I
+                know is I want you. I want you today, I want you tomorrow, and will keep on wanting
+                you for a lifetime."
+              </p>
+
+              <div class="primary-button">
+                <a href="#" onclick="toggleModal('modal1')">Click Me!</a>
+              </div>
+              
+              <!-- First Modal Popup -->
+              <div class="modal" id="modal1">
+                <div class="modal-content">
+                  <span class="close" onclick="toggleModal('modal1')">&times;</span>
+                  <h2>Happy Girlfriend's Day To My Favorite Woman In The World</h2>
+                  <center><img src="https://gifdb.com/images/high/bear-love-bouncing-mocha-with-flowers-n4m0fyne6h4e6y2x.webp" alt="Image Description" style="width:100%; max-width:300px;"></center>
+                  <p>Hey there, my baby. Happy girlfriend's day!</p>
+                  <p>I just wanted to express just how wonderful of a girlfriend you are and just how happy I am for every moment I get to spend with you. I love you so much and I can't tell you enough just how excited I am to turn you into my wife officially one of these days. You make my world a beautiful place just by being in it. I am so lucky to have you by my side, honey. I hope you like this little surprise of mine haha! </p>
+                  <button class="accept-button" onclick="toggleModal('modal2')">Click me again!</button>
+                  <!-- <button class="decline-button" onclick="declineInvitation()">Not feeling it today, mahal but maybe later?</button> -->
+                </div>
+              </div>
+              
+              <!-- Second Modal Popup -->
+              <div class="modal" id="modal2">
+                <div class="modal-content">
+                  <span class="close" onclick="toggleModal('modal2')">&times;</span>
+                  <center><img src="https://gifdb.com/images/high/sweet-bear-love-flying-kiss-zqm1unfshdym783j.webp" alt="Image Description" style="width:100%; max-width:300px;"></center>
+                  <h2>And of course, Happy 1 year and 11 months of love, my beautiful wife</h2>
+                  <p>I know lately we've had a rough patc, ups and downs, but like I always say, there's nothing that could make me lose or change my love for you hmm? I've always appreciate how loving you are, how caring you are, and how you've always talked about living with me and seeing a future where I am in it. Hearing you talk about those makes me soft and wanted to cry, but more than anything you keep making me happy, baby. I love you too much and so much more than you can possibly imagine. You make me want to do better in life and give you all the good things in this world because you deserve nothing but gentleness, lots of love, cuddles, kisses, and even more simple yet very important things to us. I've always appreciate you especially lately na pinagsasabay mo ang studies, work, and even our relationship honey. I know that wasn't easy, but you are still able to make time for us and even more than I could've ever asked. I am so proud of you and I pray to God to bless us with more things to be grateful for this coming years of our relationship. God, I love you so much and all I ever want is to see you happy and loved, baby. Happy 1 year and 1 month before our anniversary. Here's to more adventures, travels, experiences, food trips, naughties, and life challenges together with you. I love you and I would never exchange what we have for anything in this world, honey. You are the one I want to marry and wake up in bed someday. The one I want to hug after a long day at work. the one I want to eat all the delicious food with. I thank God everytime I think of you, honey. There's really nothing like doing nothing with you.</p>
+                  <button class="accept-button" onclick="toggleModal('modal2')">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="right-image">
+              <div class="thumb">
+                <img src="assets/images/belowhero.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <audio id="background-music" autoplay loop>
+            <source src="/Portfolio-Removed-unecessary-codes/assets/audio/Bruno Major - Nothing (Lyric & Chord Video).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script>
+  function toggleModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = modal.style.display === "block" ? "none" : "block";
+  }
+
+  function declineInvitation() {
+    alert("No worries! We can plan it for another time.");
+    toggleModal('modal1');
+  }
+</script>
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      setTimeout(function () {
+        $(".loader").fadeToggle();
+      }, 1500);
+
+      $("a[href='#top']").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+      });
+    </script>
+  </body>
+</html>

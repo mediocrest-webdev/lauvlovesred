@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Our Relationship Check-In</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-572-designer.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <header id="#top">
+      <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img src="assets/images/white-logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">My Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trending.html">To Remember</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Check-In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="explore.html">Themed Questions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page-banner change-name">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="header-text">
+              <h2><em>Themed</em> Questions</h2>
+              <p id="about-banner-p">
+                Hello, love! Welcome to our themed questions page. It's a chance for us to learn
+                more about each other, to laugh, to dream, and to cherish the unique, happy,
+                healthy, and full of love relationship that we're on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="container mb-5">
+      <div class="button-rel">
+        <center>
+          <button class="btn" data-toggle="modal" data-target="#themesModal">Choose a Theme</button>
+        </center>
+      </div>
+    </section>
+
+    <!-- Themes Modal -->
+    <div
+      class="modal fade"
+      id="themesModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="themesModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="themesModalLabel">Choose a Theme</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <button class="btn btn-outline-danger" onclick="selectTheme('Dates and Date Nights')">
+              Dates and Date Nights
+            </button>
+            <button class="btn btn-outline-danger" onclick="selectTheme('Goals and Aspirations')">
+              Goals and Dreams
+            </button>
+            <button class="btn btn-outline-danger" onclick="selectTheme('Intimacy')">
+              Intimacy
+            </button>
+            <button class="btn btn-outline-danger" onclick="selectTheme('Wants and Needs')">
+              Wants and Needs
+            </button>
+            <button class="btn btn-outline-danger" onclick="selectTheme('Random')">Random</button>
+            <!-- Add more theme buttons here -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question Modal -->
+    <div
+      class="modal fade"
+      id="questionModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="questionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="questionModalLabel">Question</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="questionContent"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" onclick="nextQuestion()">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
+    <script>
+      var themeQuestions = {
+        "Dates and Date Nights": [
+          "What was the most memorable date night you think we've ever done?",
+          "How do you feel about having date nights with me?",
+          "How do you think dates and date nights affects our relationship?",
+          "What is an ideal date or date night for you?",
+          "How important is date night to you and why?",
+          "What are the things you'd like to try for a change on our date nights?",
+          "How can we make our dates more fun than it already was?",
+          "What's your idea of the perfect date night, and when was the last time we had one like that?",
+          "How important is surprise and spontaneity in our date nights, and how can we incorporate more of it?",
+          "What's a date night tradition or routine you enjoy, and should we add more?",
+        ],
+        "Goals and Aspirations": [
+          "What role do our shared goals and dreams play in strengthening our relationship?",
+          "What are some personal goals or dreams you'd like to achieve in the next year, and how can I support you?",
+          "How can we ensure we're both on the same page when it comes to our future goals and plans?",
+          "Do you believe our relationship aligns with your goals and dreams, and how can we continue to make them a reality?",
+          "How can we celebrate and acknowledge each other's achievements and milestones?",
+        ],
+        Intimacy: [
+          "What are your favorite ways to initiate intimacy and enhance our connection?",
+          "Is there a particular fantasy or role-play scenario you've always wanted to explore?",
+          "What's the most exciting and memorable sexual experience we've had together?",
+          "How can we keep the passion alive and maintain a fulfilling sexual connection?",
+          "Do you have any specific desires or fantasies you'd like to share with me?",
+          "What's your perspective on the importance of communication in our sexual relationship?",
+          "Is there a particular type of touch or affection that turns you on the most?",
+          "What's one thing we haven't tried in the bedroom but you'd like to explore?",
+          "How do you feel about experimenting with new techniques or positions?",
+          "What's your view on incorporating toys or other enhancements into our intimacy?",
+          "Do you have any preferences or boundaries when it comes to our intimate moments?",
+          "How can we ensure that our sexual relationship remains satisfying and fulfilling for both of us?",
+          "What role does emotional intimacy play in our sexual connection?",
+          "Is there a sensual game or activity you'd like us to try together?",
+          "What's one thing you've always wanted to ask or discuss about our sexual relationship but haven't yet?",
+          "How can we maintain open communication about our desires and needs in the bedroom?",
+          "What's your perspective on the importance of mutual consent and respect in our intimate moments?",
+          "Is there a particular place or location where you'd like to make love someday?",
+          "What's your view on setting goals and exploring new aspects of our sexual relationship?",
+          "What's one small change we can make to improve our sexual connection right now?",
+        ],
+        "Wants and Needs": [
+          "What are some of your emotional needs in our relationship, and how can I fulfill them?",
+          "Is there a particular way you like to receive love and affection, and how can I provide it?",
+          "What's one thing you've always wanted from our relationship but haven't shared yet?",
+          "How can we ensure that our wants and needs are communicated effectively to each other?",
+          "Do you have any unmet needs or desires in our relationship that we should address?",
+          "What's one thing you'd like us to improve or work on to enhance our connection?",
+          "Is there a specific way you'd like to receive support during challenging times?",
+          "How can we create an environment where both of us feel comfortable expressing our wants and needs?",
+          "What steps can we take to make sure our relationship continues to meet our evolving wants and needs?",
+          "What's the most important thing you want from our relationship in the long run, and how can we achieve it together?",
+        ],
+        Random: [
+          "If we could take a spontaneous trip anywhere in the world right now, where would we go and why?",
+          "What's one hobby or activity you've always wanted to try together?",
+          "If our relationship were a movie, what genre would it be, and who would play us in it?",
+          "What's a silly or quirky habit of mine that you secretly find endearing?",
+          "Describe the most memorable date we've ever had and what made it so special.",
+          "If we could time travel to any period in history together, where and when would we go?",
+          "What's a dream you've never shared with me but would love to pursue someday?",
+          "If we were to write a book together, what would it be about, and what would the title be?",
+          "What's a small gesture that always makes you feel loved and appreciated?",
+          "If we were to create a new tradition for our relationship, what would it be?",
+          "Share a childhood memory that you believe has shaped who you are today.",
+          "If we could learn a new language together, which one would you choose, and why?",
+          "What's the most adventurous thing you'd like us to try in the next year?",
+          "If our relationship had a soundtrack, what songs would be on it?",
+          "What's one thing you admire about how we handle challenges together?",
+          "If we had a 'relationship bucket list,' what's one item you'd add to it?",
+          "What's the funniest or most memorable moment we've shared recently?",
+          "Describe a place that holds sentimental value for you and why it's important.",
+          "If we could have a themed party, what theme would you choose, and what costumes would we wear?",
+          "What's one thing you're excited about achieving or experiencing together in the future?",
+        ],
+      };
+
+      var currentTheme = null;
+      var currentQuestionIndex = -1;
+
+      function selectTheme(theme) {
+        currentTheme = theme;
+        currentQuestionIndex = -1;
+        nextQuestion();
+      }
+
+      function nextQuestion() {
+        if (currentTheme) {
+          currentQuestionIndex++;
+          var questionsForTheme = themeQuestions[currentTheme];
+          if (questionsForTheme && currentQuestionIndex < questionsForTheme.length) {
+            var questionToShow = questionsForTheme[currentQuestionIndex];
+            document.getElementById("questionContent").innerHTML = questionToShow;
+            $("#questionModal").modal("show");
+            // Close the "Choose a Theme" modal
+            $("#themesModal").modal("hide");
+          } else {
+            alert("Hmm, seems like we ran out of questions.");
+          }
+        } else {
+          alert("Please select a theme first.");
+        }
+      }
+    </script>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
